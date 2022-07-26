@@ -3,14 +3,13 @@ package tests;
 import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.hasItem;
-import static org.hamcrest.Matchers.is;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 public class VacanciesTests {
 
 
     @Test
-    void listVacanciesTestcheckListOfUsersByGroovy() {
+    void listVacanciesTestCheckListOfUsersByGroovy() {
         given()
                 .log().uri()
                 .log().body()
@@ -20,7 +19,7 @@ public class VacanciesTests {
                 .log().status()
                 .log().body()
                 .body("data.findAll{it.user =~/.*?@hh.ru/}.user.flatten()",
-                        hasItem(""));
+                        hasItem("[]"));
 
     }
 }
