@@ -1,4 +1,4 @@
-/**package specs;
+package specs;
 
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.http.ContentType;
@@ -32,4 +32,3 @@ public class Specs {
             .build();
 }
 
-**/

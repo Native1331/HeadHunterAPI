@@ -2,6 +2,7 @@ package tests;
 
 import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.given;
+import static io.restassured.RestAssured.requestSpecification;
 import static org.hamcrest.Matchers.hasItem;
 
 
@@ -13,6 +14,7 @@ public class VacanciesTests {
         given()
                 .log().uri()
                 .log().body()
+                .spec(requestSpecification)
                 .when()
                 .get("https://spb.hh.ru/shards/vacancies_of_the_day")
                 .then()
