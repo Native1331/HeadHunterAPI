@@ -10,7 +10,7 @@ public class VacanciesTests {
 
 
     @Test
-    void listVacanciesTest() {
+    void listVacanciesTestcheckListOfUsersByGroovy() {
         given()
                 .log().uri()
                 .log().body()
@@ -19,7 +19,9 @@ public class VacanciesTests {
                 .then()
                 .log().status()
                 .log().body()
-                .body("total", is(20));
+                .body("data.findAll{it.user =~/.*?@hh.ru/}.user.flatten()",
+                        hasItem(""));
+
     }
 }
 /**
