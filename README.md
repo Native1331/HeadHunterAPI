@@ -106,7 +106,6 @@ test
 
 
 
-https://user-images.githubusercontent.com/83497921/180842190-123c8f3d-a1af-4363-aa5b-ef48283e3013.mp4
 
 
 
